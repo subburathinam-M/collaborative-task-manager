@@ -14,5 +14,9 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: ['axios']
+  },
+  // Add this for SPA routing
+  server: {
+    historyApiFallback: true
   }
 })
