@@ -45,7 +45,7 @@ A full-stack web application for managing tasks within a team, featuring **role-
 
 ## 📂 Project Structure
 
-'''
+```
 collaborative-task-manager/
 ├── backend/
 │   ├── controllers/
@@ -61,7 +61,7 @@ collaborative-task-manager/
 │   │   └── utils/
 │   └── public/
 └── README.md
-
+```
 ---
 
 ## 🔧 Setup Instructions (Run Project Locally)
