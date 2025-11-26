@@ -102,7 +102,7 @@ VITE_API_URL=https://YOUR_BACKEND_URL
 
 Start frontend
 npm run dev
-
+````
 
 # Frontend will start on:
 
