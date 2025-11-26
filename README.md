@@ -46,21 +46,21 @@ A full-stack web application for managing tasks within a team, featuring **role-
 ## 📂 Project Structure
 
 '''
-Collaborative-Task-Manager/
-│
+collaborative-task-manager/
 ├── backend/
-│ ├── src/
-│ ├── .env
-│ ├── package.json
-│ └── ...
-│
-└── frontend/
-├── src/
-├── .env (optional)
-├── package.json
-└── ...
-
-'''
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── middleware/
+│   └── config/
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── context/
+│   │   └── utils/
+│   └── public/
+└── README.md
 
 ---
 
