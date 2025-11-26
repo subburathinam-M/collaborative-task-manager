@@ -7,7 +7,12 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  build: {
+    commonjsOptions: {
+      include: [/axios/, /node_modules/]
+    }
+  },
   optimizeDeps: {
-    include: ['react', 'react-dom']
+    include: ['axios']
   }
 })
