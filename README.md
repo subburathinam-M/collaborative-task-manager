@@ -77,20 +77,84 @@ cd backend
 npm install
 
 # Create .env inside backend
-'''
+
 PORT=5000
 MONGO_URI=YOUR_MONGODB_ATLAS_URI
 JWT_SECRET=SOME_STRONG_SECRET
-'''
 
 # Start backend server
-'''
+
 npm run dev
-'''
+
+Backend will start on:
+
+http://localhost:5000
+
+3️⃣ Frontend Setup
+
+Open a new terminal:
+
+cd frontend
+npm install
+
+Optional .env (only if backend deployed)
+VITE_API_URL=https://YOUR_BACKEND_URL
+
+Start frontend
+npm run dev
 
 
+# Frontend will start on:
+
+http://localhost:5173
+
+## 🔐 Demo Credentials (Suggested for HR)
+
+| Role    | Email                                         | Password |
+| ------- | --------------------------------------------- | -------- |
+| Manager | [manager@gmail.com](mailto:manager@gmail.com) | 123456   |
+| User    | [demo@gmail.com](mailto:demo@gmail.com)       | 123456   |
+
+(Modify based on your actual database values)
+
+## 📌 API Endpoints Summary
+
+| Method | Endpoint                       | Access                                |
+| ------ | ------------------------------ | ------------------------------------- |
+| POST   | `/api/auth/signup`             | Public                                |
+| POST   | `/api/auth/login`              | Public                                |
+| GET    | `/api/tasks?assignedToMe=true` | User / Manager                        |
+| GET    | `/api/tasks?createdByMe=true`  | Manager                               |
+| POST   | `/api/tasks`                   | Manager                               |
+| PUT    | `/api/tasks/:id`               | Manager / Assigned User (status only) |
+| DELETE | `/api/tasks/:id`               | Manager                               |
+
+## 🧠 Role-Based Permissions
+
+| Action                      | Manager | User            |
+| --------------------------- | ------- | --------------- |
+| Login                       | ✔       | ✔               |
+| Create task                 | ✔       | ✖               |
+| Assign task                 | ✔       | ✖               |
+| Update any task data        | ✔       | ✖               |
+| Update only task status     | ✔       | ✔ (if assigned) |
+| Delete task                 | ✔       | ✖               |
+| View tasks assigned to self | ✔       | ✔               |
+| View tasks created by self  | ✔       | ✖               |
 
 
+### 🏁 Conclusion
 
-## 📂 Project Structure
+This project demonstrates:
+
+Full-stack development
+
+Secure authentication
+
+Role-based access control
+
+Socket.io integrations
+
+State management + responsive UI
+
 
