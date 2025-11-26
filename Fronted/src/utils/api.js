@@ -3,10 +3,10 @@ import axios from 'axios';
 
 // Create axios instance with base configuration
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api',
+  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000',
   timeout: 10000, // 10 seconds timeout
 });
-
+// baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api',
 // Request interceptor to add auth token
 api.interceptors.request.use(
   (config) => {
